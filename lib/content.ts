@@ -90,8 +90,8 @@ export const tiers: {
 }[] = [
   {
     name: "Buana",
-    range: "Di atas Rp 5.000.000",
-    short: "> Rp 5 jt",
+    range: "Rp 5.000.000 ke atas",
+    short: "≥ Rp 5 jt",
     facilities: [
       "Logo atau nama pada poster publikasi gabungan Instagram",
       "Sertifikat penghargaan resmi pasca kegiatan",

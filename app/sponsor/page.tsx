@@ -113,10 +113,10 @@ export default async function SponsorPage() {
               <thead>
                 <tr>
                   <th scope="col">Fasilitas</th>
-                  <th scope="col" className="check">Reguler</th>
-                  <th scope="col" className="check">Tirta</th>
-                  <th scope="col" className="check">Wana</th>
                   <th scope="col" className="check">Buana</th>
+                  <th scope="col" className="check">Wana</th>
+                  <th scope="col" className="check">Tirta</th>
+                  <th scope="col" className="check">Reguler</th>
                 </tr>
               </thead>
               <tbody>
@@ -125,10 +125,10 @@ export default async function SponsorPage() {
                     <th scope="row" style={{ fontWeight: 400, textTransform: "none", letterSpacing: 0, fontFamily: "inherit", fontSize: ".9375rem", color: "var(--ink)" }}>
                       {row.label}
                     </th>
-                    <td className={row.reguler ? "check" : "dash"}>{row.reguler ? "Ada" : "Tidak"}</td>
-                    <td className={row.tirta ? "check" : "dash"}>{row.tirta ? "Ada" : "Tidak"}</td>
-                    <td className={row.wana ? "check" : "dash"}>{row.wana ? "Ada" : "Tidak"}</td>
                     <td className={row.buana ? "check" : "dash"}>{row.buana ? "Ada" : "Tidak"}</td>
+                    <td className={row.wana ? "check" : "dash"}>{row.wana ? "Ada" : "Tidak"}</td>
+                    <td className={row.tirta ? "check" : "dash"}>{row.tirta ? "Ada" : "Tidak"}</td>
+                    <td className={row.reguler ? "check" : "dash"}>{row.reguler ? "Ada" : "Tidak"}</td>
                   </tr>
                 ))}
               </tbody>

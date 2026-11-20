@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createSupabaseMiddleware, isServerSupabaseConfigured } from "@/lib/supabase-server";
 
-export async function middleware(req: NextRequest) {
+export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const isLogin = pathname === "/admin/login";
 

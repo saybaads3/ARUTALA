@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const base = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://arutala.web.id";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = ["", "/program", "/sponsor", "/dokumentasi", "/sosial", "/links", "/tentang", "/merch"];

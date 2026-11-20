@@ -13,7 +13,7 @@ export const viewport: Viewport = {
   themeColor: "#0e2e38",
 };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://arutala.web.id";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -41,11 +41,20 @@ export const metadata: Metadata = {
     title: "ARUTALA 2027 · Menjejak Bakti, Menjaga Lestari",
     description:
       "Empat program kerja, 38 mahasiswa, 15 hari di Desa Batu Lintang, Kapuas Hulu. Program Pengabdian Mahasiswa Kepada Masyarakat Teknik Lingkungan Untan.",
+    images: [
+      {
+        url: "/img/og-arutala.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ARUTALA 2027, Menjejak Bakti Menjaga Lestari",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "ARUTALA 2027 · Menjejak Bakti, Menjaga Lestari",
     description: "PMKM Teknik Lingkungan Universitas Tanjungpura di Desa Batu Lintang, Kapuas Hulu.",
+    images: ["/img/og-arutala.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },

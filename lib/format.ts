@@ -12,8 +12,11 @@ export const compactRupiah = (n: number) => {
   return rupiah(n);
 };
 
+// Ambang mengikuti tabel feedback sponsor: Buana > Rp 5.000.000,
+// Wana Rp 2.000.000 sampai Rp 4.999.000, Tirta Rp 750.000 sampai
+// Rp 1.999.000, Donatur Reguler di bawah Rp 750.000.
 export const tierOf = (nominal: number): TierName => {
-  if (nominal > 5_000_000) return "Buana";
+  if (nominal >= 5_000_000) return "Buana";
   if (nominal >= 2_000_000) return "Wana";
   if (nominal >= 750_000) return "Tirta";
   return "Donatur Reguler";

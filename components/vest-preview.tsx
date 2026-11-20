@@ -26,7 +26,8 @@ export default function VestPreview({ sponsors }: Props) {
           ))}
         </div>
         <p className="small muted" style={{ marginTop: ".75rem" }}>
-          {filled.length} dari {vestCapacity} slot terisi. Slot 1 adalah area VIP berukuran paling besar.
+          {filled.length} dari {vestCapacity} slot terisi. Slot 01 ditandai sebagai area VIP, mengikuti kotak logo
+          utama pada gambar kerja rompi di samping.
         </p>
       </div>
 

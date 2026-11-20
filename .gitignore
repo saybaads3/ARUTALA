@@ -1,9 +1,14 @@
 node_modules
 .next
 out
+.env
 .env.local
 .env*.local
 *.tsbuildinfo
 next-env.d.ts
 .DS_Store
 .vercel
+.shots
+.tmpcheck
+.tmp2
+.nextstart.log

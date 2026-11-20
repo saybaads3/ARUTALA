@@ -66,7 +66,7 @@
   --ochre-bright: #d8a055;
   --line: rgba(20, 29, 24, 0.14);
   --line-strong: rgba(20, 29, 24, 0.3);
-  --on-dark: rgba(244, 241, 231, 0.76);
+  --on-dark: rgba(244, 241, 231, 0.84);
   --on-dark-line: rgba(244, 241, 231, 0.16);
   --gutter: clamp(20px, 5vw, 64px);
   --section-y: clamp(56px, 8vw, 112px);
@@ -550,7 +550,7 @@ button {
   font-size: 0.625rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(244, 241, 231, 0.62);
+  color: rgba(244, 241, 231, 0.8);
   padding-top: 0.22rem;
 }
 .hero__data dd {
@@ -1070,7 +1070,7 @@ button {
 }
 .tbl .dash {
   text-align: center;
-  color: rgba(20, 29, 24, 0.3);
+  color: rgba(20, 29, 24, 0.62);
 }
 
 /* ---------- cards / notices ---------- */
@@ -1297,7 +1297,7 @@ button {
 }
 .slots {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   gap: 4px;
   padding: 10px;
   background: #22301f;
@@ -1309,7 +1309,7 @@ button {
   align-items: center;
   justify-content: center;
   border: 1px dashed rgba(244, 241, 231, 0.35);
-  color: rgba(244, 241, 231, 0.65);
+  color: rgba(244, 241, 231, 0.82);
   font-family: "Plex Mono", ui-monospace, monospace;
   font-size: 0.625rem;
   overflow: hidden;
@@ -1324,15 +1324,16 @@ button {
   color: var(--ochre-bright);
 }
 .slot--vip {
-  grid-column: span 2;
-  grid-row: span 2;
-  border-color: var(--ochre-bright);
+  border: 2px solid var(--ochre-bright);
   color: var(--ochre-bright);
-  font-size: 0.75rem;
+  font-weight: 500;
 }
 @media (max-width: 860px) {
   .vest-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+  .slots {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 
@@ -1746,7 +1747,7 @@ button {
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(244, 241, 231, 0.62);
+  color: rgba(244, 241, 231, 0.8);
   margin: 0 0 0.75rem;
 }
 .footer-grid a {
@@ -1779,7 +1780,7 @@ button {
   font-family: "Plex Mono", ui-monospace, monospace;
   font-size: 0.6875rem;
   letter-spacing: 0.06em;
-  color: rgba(244, 241, 231, 0.62);
+  color: rgba(244, 241, 231, 0.8);
 }
 @media (max-width: 780px) {
   .footer-grid {
