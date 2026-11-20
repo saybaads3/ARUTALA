@@ -68,7 +68,7 @@ components/         header, footer, ledger program, papan sponsor, rompi, keranj
 lib/                data proposal, repo Supabase, format, keranjang, auth admin
 public/             font, gambar dari proposal, dokumen PDF
 supabase/schema.sql
-middleware.ts       perlindungan /admin dan refresh sesi
+proxy.ts            perlindungan /admin dan refresh sesi (Next.js 16, pengganti middleware)
 ```
 
 ## Catatan data
@@ -79,4 +79,18 @@ Gambar yang dipakai berasal dari lampiran proposal (peta denah lokasi, gambar ke
 
 ## Deploy
 
-Vercel: hubungkan repositori, tambahkan variabel env yang sama, deploy. Domain diatur di `NEXT_PUBLIC_SITE_URL` agar sitemap dan metadata memakai URL yang benar.
+Repositori: `https://github.com/saybaads3/ARUTALA`. Branch produksi: `main`.
+
+Vercel: import repo, framework terdeteksi Next.js, lalu tambahkan variabel environment
+(lihat `.env.local.example` atau `VERCEL-ENV-ARUTALA.txt` di folder induk proyek).
+Domain produksi: **arutala.web.id**, sudah dipakai sebagai fallback `NEXT_PUBLIC_SITE_URL`
+di `app/layout.tsx`, `app/sitemap.ts`, dan `app/robots.ts`.
+
+Langkah domain:
+
+1. Di Vercel, buka Project > Settings > Domains, tambahkan `arutala.web.id` dan `www.arutala.web.id`.
+2. Di pengelola domain, arahkan DNS sesuai instruksi Vercel (A `76.76.21.21` untuk apex, CNAME `cname.vercel-dns.com` untuk `www`).
+3. Setelah domain aktif, ubah `NEXT_PUBLIC_SITE_URL=https://arutala.web.id` lalu redeploy agar metadata dan sitemap memakai URL final.
+
+Supabase Auth sudah diarahkan ke domain ini: Site URL `https://arutala.web.id` dengan
+redirect allowlist untuk domain produksi dan `localhost:3000`.
